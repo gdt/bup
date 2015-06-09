@@ -5,7 +5,8 @@ from bup.helpers import sc_page_size
 
 _fmincore = getattr(helpers, 'fmincore', None)
 
-BLOB_MAX = 8192*4   # 8192 is the "typical" blob size for bupsplit
+BLOB_TYPICAL = 65536 # XXX should be from _helpers
+BLOB_MAX = BLOB_TYPICAL * 4
 BLOB_READ_SIZE = 1024*1024
 MAX_PER_TREE = 256
 progress_callback = None
