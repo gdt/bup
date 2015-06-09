@@ -5,8 +5,8 @@ from bup import _helpers
 from bup.config import ConfigError
 
 
-BUP_BLOBBITS = 13
-BUP_TREE_BLOBBITS = 13
+BUP_BLOBBITS = 16
+BUP_TREE_BLOBBITS = 16
 MAX_PER_TREE = 256
 fanout = 16
 
