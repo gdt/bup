@@ -17,3 +17,6 @@ nbproject
 /t/sampledata/var/
 /t/tmp/
 /lib/bup/_checkout.py
+BUILD.*
+CHECK.*
+_do
