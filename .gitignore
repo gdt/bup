@@ -25,3 +25,6 @@
 /test/tmp/
 \#*#
 __pycache__/
+BUILD.*
+CHECK.*
+_do
