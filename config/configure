@@ -66,6 +66,10 @@ expr "$MAKE_VERSION" '>=' '3.81' || AC_FAIL "ERROR: $MAKE must be >= version 3.8
 AC_SUB bup_make "$MAKE"
 
 bup_python="$(type -p "$PYTHON")"
+test -z "$bup_python" && bup_python="$(bup_find_prog python3.12 '')"
+test -z "$bup_python" && bup_python="$(bup_find_prog python3.11 '')"
+test -z "$bup_python" && bup_python="$(bup_find_prog python3.10 '')"
+test -z "$bup_python" && bup_python="$(bup_find_prog python3.9 '')"
 test -z "$bup_python" && bup_python="$(bup_find_prog python3.8 '')"
 test -z "$bup_python" && bup_python="$(bup_find_prog python3.7 '')"
 test -z "$bup_python" && bup_python="$(bup_find_prog python3.6 '')"
