@@ -146,6 +146,8 @@ bup_realpath(const char *pathname)
 
 #if defined(__APPLE__) && defined(__MACH__)
 
+#include <mach-o/dyld.h>
+
 static char *exe_parent_dir(const char * const argv_0) {
     char *mpath = NULL;
     char spath[2048];
