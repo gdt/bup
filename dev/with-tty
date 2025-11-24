@@ -5,10 +5,10 @@ set -ueo pipefail
 usage() { echo 'Usage: with-tty command [arg ...]'; }
 misuse() { usage 1>&2; exit 2; }
 
-if script -qec true /dev/null; then
+if false; then
     # linux flavor
     script -qec "$(printf ' %q' "$@")" /dev/null
 else
     # bsd flavor
-    script -qe /dev/null "$@"
+    script -q /dev/null "$@"
 fi
